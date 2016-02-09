@@ -13,6 +13,7 @@
 		A64A6F051C6A9AEF00C53B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A64A6F041C6A9AEF00C53B85 /* Assets.xcassets */; };
 		A64A6F081C6A9AEF00C53B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64A6F061C6A9AEF00C53B85 /* LaunchScreen.storyboard */; };
 		A64A6F131C6A9AEF00C53B85 /* Two_Player_Combat_Test_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A6F121C6A9AEF00C53B85 /* Two_Player_Combat_Test_AppTests.swift */; };
+		A64A6F1E1C6AB09000C53B85 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A6F1D1C6AB09000C53B85 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A64A6F0E1C6A9AEF00C53B85 /* Two Player Combat Test AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Two Player Combat Test AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64A6F121C6A9AEF00C53B85 /* Two_Player_Combat_Test_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Two_Player_Combat_Test_AppTests.swift; sourceTree = "<group>"; };
 		A64A6F141C6A9AEF00C53B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A64A6F1D1C6AB09000C53B85 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				A64A6EFD1C6A9AEF00C53B85 /* AppDelegate.swift */,
 				A64A6EFF1C6A9AEF00C53B85 /* ViewController.swift */,
+				A64A6F1D1C6AB09000C53B85 /* GameController.swift */,
 				A64A6F011C6A9AEF00C53B85 /* Main.storyboard */,
 				A64A6F041C6A9AEF00C53B85 /* Assets.xcassets */,
 				A64A6F061C6A9AEF00C53B85 /* LaunchScreen.storyboard */,
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64A6F001C6A9AEF00C53B85 /* ViewController.swift in Sources */,
+				A64A6F1E1C6AB09000C53B85 /* GameController.swift in Sources */,
 				A64A6EFE1C6A9AEF00C53B85 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
