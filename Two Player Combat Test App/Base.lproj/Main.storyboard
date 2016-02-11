@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -156,6 +156,12 @@
                                     <action selector="onPressedLeftAttackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P3C-Cr-TaJ"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpK-I2-3HT" userLabel="leftAttackLbl">
+                                <rect key="frame" x="91" y="63" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLk-jc-mCD" userLabel="rightAttackBtn">
                                 <rect key="frame" x="408" y="50" width="164" height="60"/>
                                 <constraints>
@@ -168,12 +174,6 @@
                                     <action selector="onPressedRightAttackBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIv-l5-LkD"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpK-I2-3HT" userLabel="leftAttackLbl">
-                                <rect key="frame" x="91" y="63" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Attack!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuG-nw-WI7" userLabel="rightAttackLbl">
                                 <rect key="frame" x="453" y="69" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -207,24 +207,31 @@
                             <constraint firstItem="FuG-nw-WI7" firstAttribute="centerY" secondItem="kLk-jc-mCD" secondAttribute="centerY" id="0dG-Si-fdc"/>
                             <constraint firstAttribute="trailing" secondItem="aLi-R7-KZ6" secondAttribute="trailing" id="2jo-wT-1DW"/>
                             <constraint firstItem="J5c-TF-dop" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Vt-aZ-acY"/>
+                            <constraint firstItem="BRW-in-fTD" firstAttribute="bottom" secondItem="lKM-sM-ntu" secondAttribute="bottom" id="4aM-0S-U40"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J5c-TF-dop" secondAttribute="bottom" constant="10" id="4lj-Al-6l7"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4pc-6r-A8b"/>
                             <constraint firstItem="J5c-TF-dop" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="6Mv-kU-m2U"/>
                             <constraint firstItem="lKM-sM-ntu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="15" id="6o4-E1-YIr"/>
+                            <constraint firstItem="uAa-tj-nqE" firstAttribute="leading" secondItem="2Pk-f2-3zQ" secondAttribute="trailing" constant="8" id="A03-Cw-GBW"/>
                             <constraint firstItem="kLk-jc-mCD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="BRM-py-UkI"/>
                             <constraint firstItem="2Pk-f2-3zQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="CAD-aa-qMC"/>
                             <constraint firstAttribute="trailing" secondItem="J5c-TF-dop" secondAttribute="trailing" constant="50" id="CYY-rT-NRE"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="2Pk-f2-3zQ" secondAttribute="bottom" constant="1" id="Cjj-SZ-WKa"/>
+                            <constraint firstItem="2Pk-f2-3zQ" firstAttribute="bottom" secondItem="Ca3-3f-2Ft" secondAttribute="bottom" id="FHO-rA-1Ou"/>
                             <constraint firstItem="Ca3-3f-2Ft" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Fge-6l-hGx"/>
+                            <constraint firstItem="uAa-tj-nqE" firstAttribute="top" secondItem="Ca3-3f-2Ft" secondAttribute="top" id="Hoj-6V-ypu"/>
                             <constraint firstItem="zgK-2V-An1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="HxU-nX-Dgq"/>
                             <constraint firstItem="9tF-lg-mDR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="15" id="K31-1l-NPO"/>
                             <constraint firstItem="ZPT-JS-BPO" firstAttribute="centerX" secondItem="J5c-TF-dop" secondAttribute="centerX" id="M7q-t8-J7t"/>
                             <constraint firstItem="FuG-nw-WI7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MPP-vE-gdw"/>
                             <constraint firstItem="uAa-tj-nqE" firstAttribute="leading" secondItem="2Pk-f2-3zQ" secondAttribute="trailing" constant="8" id="Nkm-TH-tak"/>
+                            <constraint firstItem="BRW-in-fTD" firstAttribute="trailing" secondItem="lKM-sM-ntu" secondAttribute="trailing" id="O78-Zv-s5E"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="BRW-in-fTD" secondAttribute="bottom" constant="1" id="QMd-6N-dGG"/>
                             <constraint firstItem="uAa-tj-nqE" firstAttribute="top" secondItem="2Pk-f2-3zQ" secondAttribute="top" id="Sqe-1B-rvz"/>
                             <constraint firstItem="TxB-2W-W0L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ukm-2g-NKo"/>
+                            <constraint firstItem="Ca3-3f-2Ft" firstAttribute="trailing" secondItem="zgK-2V-An1" secondAttribute="trailing" id="V2p-gQ-wEP"/>
                             <constraint firstItem="ZPT-JS-BPO" firstAttribute="centerY" secondItem="J5c-TF-dop" secondAttribute="centerY" id="X6d-zC-r5s"/>
+                            <constraint firstItem="BRW-in-fTD" firstAttribute="leading" secondItem="kLk-jc-mCD" secondAttribute="leading" id="Xn0-DK-xSB"/>
                             <constraint firstAttribute="trailing" secondItem="kLk-jc-mCD" secondAttribute="trailing" constant="50" id="Xox-2k-eNj"/>
                             <constraint firstItem="FxG-Al-HVU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YJY-5t-I5i"/>
                             <constraint firstItem="TpK-I2-3HT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yys-p5-LQL"/>
@@ -233,10 +240,12 @@
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="TxB-2W-W0L" secondAttribute="bottom" constant="1" id="d20-sV-8FY"/>
                             <constraint firstAttribute="trailing" secondItem="FxG-Al-HVU" secondAttribute="trailing" id="gAO-pm-bTM"/>
                             <constraint firstItem="BRW-in-fTD" firstAttribute="top" secondItem="4B7-0T-NoA" secondAttribute="top" id="jZM-4u-tIc"/>
-                            <constraint firstItem="TpK-I2-3HT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kR5-rh-BTB"/>
+                            <constraint firstItem="zgK-2V-An1" firstAttribute="centerX" secondItem="kLk-jc-mCD" secondAttribute="centerX" id="jg5-be-TXn"/>
+                            <constraint firstItem="uAa-tj-nqE" firstAttribute="leading" secondItem="2Pk-f2-3zQ" secondAttribute="trailing" constant="8" id="kep-cU-7iQ"/>
                             <constraint firstItem="TpK-I2-3HT" firstAttribute="centerX" secondItem="zgK-2V-An1" secondAttribute="centerX" id="lOb-pp-Rqb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aLi-R7-KZ6" secondAttribute="bottom" id="lRu-CK-Dw9"/>
                             <constraint firstItem="TpK-I2-3HT" firstAttribute="centerY" secondItem="zgK-2V-An1" secondAttribute="centerY" id="lrA-qW-gdr"/>
+                            <constraint firstItem="lKM-sM-ntu" firstAttribute="centerX" secondItem="2Pk-f2-3zQ" secondAttribute="centerX" id="mo1-p4-LpS"/>
                             <constraint firstItem="FuG-nw-WI7" firstAttribute="centerX" secondItem="kLk-jc-mCD" secondAttribute="centerX" id="oP9-sf-fIl"/>
                             <constraint firstItem="zgK-2V-An1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="pIj-th-lFO"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="lKM-sM-ntu" secondAttribute="bottom" id="qnA-du-T1T"/>
@@ -244,11 +253,23 @@
                             <constraint firstItem="FuG-nw-WI7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wzk-f9-CFf"/>
                             <constraint firstItem="FxG-Al-HVU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xwM-fV-oYC"/>
                             <constraint firstItem="BRW-in-fTD" firstAttribute="leading" secondItem="4B7-0T-NoA" secondAttribute="trailing" constant="8" id="yQc-Ir-Z5u"/>
+                            <constraint firstItem="2Pk-f2-3zQ" firstAttribute="leading" secondItem="Ca3-3f-2Ft" secondAttribute="leading" id="zVB-6C-kRY"/>
+                            <constraint firstItem="uAa-tj-nqE" firstAttribute="top" secondItem="2Pk-f2-3zQ" secondAttribute="top" id="zpO-It-vp4"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="HxU-nX-Dgq"/>
+                                <exclude reference="Yys-p5-LQL"/>
+                                <exclude reference="CAD-aa-qMC"/>
+                                <exclude reference="Nkm-TH-tak"/>
+                                <exclude reference="Sqe-1B-rvz"/>
+                                <exclude reference="kep-cU-7iQ"/>
+                                <exclude reference="zpO-It-vp4"/>
+                                <exclude reference="Xox-2k-eNj"/>
                                 <exclude reference="MPP-vE-gdw"/>
                                 <exclude reference="wzk-f9-CFf"/>
+                                <exclude reference="mo1-p4-LpS"/>
+                                <exclude reference="Cjj-SZ-WKa"/>
                             </mask>
                         </variation>
                     </view>

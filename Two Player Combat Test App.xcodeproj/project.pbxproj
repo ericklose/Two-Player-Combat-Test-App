@@ -14,6 +14,9 @@
 		A64A6F081C6A9AEF00C53B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A64A6F061C6A9AEF00C53B85 /* LaunchScreen.storyboard */; };
 		A64A6F131C6A9AEF00C53B85 /* Two_Player_Combat_Test_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A6F121C6A9AEF00C53B85 /* Two_Player_Combat_Test_AppTests.swift */; };
 		A64A6F1E1C6AB09000C53B85 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64A6F1D1C6AB09000C53B85 /* GameController.swift */; };
+		A6B10F621C6C15170059D28A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B10F611C6C15170059D28A /* Character.swift */; };
+		A6B10F641C6C151C0059D28A /* Orc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B10F631C6C151C0059D28A /* Orc.swift */; };
+		A6B10F661C6C15200059D28A /* Soldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B10F651C6C15200059D28A /* Soldier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		A64A6F121C6A9AEF00C53B85 /* Two_Player_Combat_Test_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Two_Player_Combat_Test_AppTests.swift; sourceTree = "<group>"; };
 		A64A6F141C6A9AEF00C53B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A64A6F1D1C6AB09000C53B85 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		A6B10F611C6C15170059D28A /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		A6B10F631C6C151C0059D28A /* Orc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orc.swift; sourceTree = "<group>"; };
+		A6B10F651C6C15200059D28A /* Soldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soldier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,9 @@
 			children = (
 				A64A6EFD1C6A9AEF00C53B85 /* AppDelegate.swift */,
 				A64A6EFF1C6A9AEF00C53B85 /* ViewController.swift */,
+				A6B10F611C6C15170059D28A /* Character.swift */,
+				A6B10F631C6C151C0059D28A /* Orc.swift */,
+				A6B10F651C6C15200059D28A /* Soldier.swift */,
 				A64A6F1D1C6AB09000C53B85 /* GameController.swift */,
 				A64A6F011C6A9AEF00C53B85 /* Main.storyboard */,
 				A64A6F041C6A9AEF00C53B85 /* Assets.xcassets */,
@@ -205,6 +214,9 @@
 				A64A6F001C6A9AEF00C53B85 /* ViewController.swift in Sources */,
 				A64A6F1E1C6AB09000C53B85 /* GameController.swift in Sources */,
 				A64A6EFE1C6A9AEF00C53B85 /* AppDelegate.swift in Sources */,
+				A6B10F641C6C151C0059D28A /* Orc.swift in Sources */,
+				A6B10F661C6C15200059D28A /* Soldier.swift in Sources */,
+				A6B10F621C6C15170059D28A /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +406,7 @@
 				A64A6F191C6A9AEF00C53B85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A64A6F1A1C6A9AEF00C53B85 /* Build configuration list for PBXNativeTarget "Two Player Combat Test AppTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +415,7 @@
 				A64A6F1C1C6A9AEF00C53B85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

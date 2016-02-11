@@ -44,8 +44,33 @@ class ViewController: UIViewController {
         leftAttackLbl.hidden = false
     }
     
+    func rightOrcPicked2() {
+        rightOrc.hidden = false
+        rightPlayerSelection.hidden = true
+        rightHpLbl.hidden = false
+        rightAttackBtn.hidden = false
+        rightAttackLbl.hidden = false
+    }
+    
+    func leftSoldierPicked2() {
+        leftSoldier.hidden = false
+        leftPlayerSelection.hidden = true
+        leftHpLbl.hidden = false
+        leftAttackBtn.hidden = false
+        leftAttackLbl.hidden = false
+    }
+    
+    func rightSoldierPicked2() {
+        rightSoldier.hidden = false
+        rightPlayerSelection.hidden = true
+        rightHpLbl.hidden = false
+        rightAttackBtn.hidden = false
+        rightAttackLbl.hidden = false
+    }
+    
 
     @IBAction func onPressedLeftAttackBtn(sender: AnyObject) {
+        
     }
     
     @IBAction func onPressedRightAttackBtn(sender: AnyObject) {
@@ -56,12 +81,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onPressedLeftSoldierBtn(sender: AnyObject) {
+        leftSoldierPicked2()
     }
 
     @IBAction func onPressedRightOrcBtn(sender: AnyObject) {
+        rightOrcPicked2()
     }
     
     @IBAction func onPressedRightSoldierBtn(sender: AnyObject) {
+        rightSoldierPicked2()
     }
     
 }
