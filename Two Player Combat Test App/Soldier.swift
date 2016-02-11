@@ -10,7 +10,8 @@ import Foundation
 
 class Soldier: Character {
     
+    
 }
-    
-    
-    
+
+
+
