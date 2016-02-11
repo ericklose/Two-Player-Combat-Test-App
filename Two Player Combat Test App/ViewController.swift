@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         rightPlayerSelection.hidden = true
         rightHpLbl.hidden = false
         rightAttackBtn.hidden = false
-        rightAttackLbl.hidden = false
+        rightAttackLbl.hidden = false        
     }
     
     func leftSoldierPicked2() {

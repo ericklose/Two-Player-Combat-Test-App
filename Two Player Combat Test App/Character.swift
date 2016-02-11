@@ -37,7 +37,18 @@ class Character {
     }
     
     
+    init (startingHp: Int, attackPwr: Int) {
+        self._hp = startingHp
+        self._attackPwr = attackPwr
+    }
     
-    
+    func attack(attackPwr:Int) -> Bool {
+        //how do I pass the button used to attack???
+        self._hp -= attackPwr
+        //NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "generateRandomEnemy", userInfo: nil, repeats: false)
+        
+        return true
+        
+    }
     
 }
