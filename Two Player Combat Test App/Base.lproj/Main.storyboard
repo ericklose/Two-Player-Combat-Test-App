@@ -56,7 +56,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TxB-2W-W0L">
-                                <rect key="frame" x="20" y="366" width="154" height="171"/>
+                                <rect key="frame" x="20" y="366" width="154" height="172"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left Player:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46N-cD-qi5" userLabel="Left Player:">
                                         <rect key="frame" x="0.0" y="0.0" width="86" height="21"/>
@@ -71,7 +71,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpS-7s-zlA" userLabel="leftOrcBtn">
-                                        <rect key="frame" x="0.0" y="61" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="62" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="6bo-5o-o0g"/>
                                             <constraint firstAttribute="height" constant="50" id="gMJ-H2-SET"/>
@@ -82,7 +82,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98a-2g-b9l" userLabel="leftSoldierBtn">
-                                        <rect key="frame" x="0.0" y="121" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="122" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="7PL-ud-M6b"/>
                                             <constraint firstAttribute="height" constant="50" id="Uao-hF-bcj"/>
@@ -95,7 +95,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9tF-lg-mDR">
-                                <rect key="frame" x="426" y="366" width="154" height="171"/>
+                                <rect key="frame" x="426" y="366" width="154" height="172"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Player:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="st4-Wg-w0g">
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="21"/>
@@ -110,7 +110,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgD-66-phs" userLabel="rightOrcBtn">
-                                        <rect key="frame" x="0.0" y="61" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="62" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="h2v-qO-pZx"/>
                                             <constraint firstAttribute="width" constant="50" id="nZ5-Tj-pym"/>
@@ -121,7 +121,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAi-LD-P2v" userLabel="rightSoldierBtn">
-                                        <rect key="frame" x="0.0" y="121" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="122" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="NkD-kJ-pi3"/>
                                             <constraint firstAttribute="height" constant="50" id="wK7-Kj-b3T"/>
@@ -238,9 +238,15 @@
                             <constraint firstItem="BRW-in-fTD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="15" id="ZYR-di-kug"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="9tF-lg-mDR" secondAttribute="bottom" id="aPy-KC-540"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="TxB-2W-W0L" secondAttribute="bottom" constant="1" id="d20-sV-8FY"/>
+                            <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="2Pk-f2-3zQ" secondAttribute="bottom" id="eYR-T1-ztT"/>
+                            <constraint firstItem="Ca3-3f-2Ft" firstAttribute="leading" secondItem="zgK-2V-An1" secondAttribute="leading" id="ejQ-QX-lgc"/>
                             <constraint firstAttribute="trailing" secondItem="FxG-Al-HVU" secondAttribute="trailing" id="gAO-pm-bTM"/>
+                            <constraint firstItem="2Pk-f2-3zQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="hNl-l3-D08"/>
+                            <constraint firstItem="kLk-jc-mCD" firstAttribute="centerY" secondItem="zgK-2V-An1" secondAttribute="centerY" id="hRV-uW-jsL"/>
+                            <constraint firstItem="2Pk-f2-3zQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="iAF-J4-6eT"/>
                             <constraint firstItem="BRW-in-fTD" firstAttribute="top" secondItem="4B7-0T-NoA" secondAttribute="top" id="jZM-4u-tIc"/>
                             <constraint firstItem="zgK-2V-An1" firstAttribute="centerX" secondItem="kLk-jc-mCD" secondAttribute="centerX" id="jg5-be-TXn"/>
+                            <constraint firstItem="BRW-in-fTD" firstAttribute="trailing" secondItem="kLk-jc-mCD" secondAttribute="trailing" id="k8r-rD-fSA"/>
                             <constraint firstItem="uAa-tj-nqE" firstAttribute="leading" secondItem="2Pk-f2-3zQ" secondAttribute="trailing" constant="8" id="kep-cU-7iQ"/>
                             <constraint firstItem="TpK-I2-3HT" firstAttribute="centerX" secondItem="zgK-2V-An1" secondAttribute="centerX" id="lOb-pp-Rqb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aLi-R7-KZ6" secondAttribute="bottom" id="lRu-CK-Dw9"/>
@@ -259,8 +265,11 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="HxU-nX-Dgq"/>
+                                <exclude reference="jg5-be-TXn"/>
                                 <exclude reference="Yys-p5-LQL"/>
                                 <exclude reference="CAD-aa-qMC"/>
+                                <exclude reference="iAF-J4-6eT"/>
+                                <exclude reference="V2p-gQ-wEP"/>
                                 <exclude reference="Nkm-TH-tak"/>
                                 <exclude reference="Sqe-1B-rvz"/>
                                 <exclude reference="kep-cU-7iQ"/>
@@ -268,6 +277,7 @@
                                 <exclude reference="Xox-2k-eNj"/>
                                 <exclude reference="MPP-vE-gdw"/>
                                 <exclude reference="wzk-f9-CFf"/>
+                                <exclude reference="Xn0-DK-xSB"/>
                                 <exclude reference="mo1-p4-LpS"/>
                                 <exclude reference="Cjj-SZ-WKa"/>
                             </mask>
@@ -277,7 +287,7 @@
                         <outlet property="leftAttackBtn" destination="zgK-2V-An1" id="klh-gi-LWu"/>
                         <outlet property="leftAttackLbl" destination="TpK-I2-3HT" id="XPP-FT-UsC"/>
                         <outlet property="leftHpLbl" destination="uAa-tj-nqE" id="PKG-SK-fdt"/>
-                        <outlet property="leftOrc" destination="lKM-sM-ntu" id="SQP-hq-pfb"/>
+                        <outlet property="leftOrc" destination="2Pk-f2-3zQ" id="PMr-ts-MjJ"/>
                         <outlet property="leftPlayerSelection" destination="TxB-2W-W0L" id="dqm-FN-dUX"/>
                         <outlet property="leftSoldier" destination="Ca3-3f-2Ft" id="Tyh-v4-gS0"/>
                         <outlet property="mainTextLbl" destination="ZPT-JS-BPO" id="7cg-Ky-drr"/>
