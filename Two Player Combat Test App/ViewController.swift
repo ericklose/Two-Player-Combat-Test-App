@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         leftOrc.hidden = false
         leftPlayerSelection.hidden = true
         leftPlayerPicked = true
-        leftPlayer = Orc(startingHp: 50, attackPwr: 10, side: right)
+        leftPlayer = Orc(startingHp: 50, attackPwr: 10, playerSide: "Left")
     }
     
     func rightOrcPicked2() {
@@ -67,6 +67,8 @@ class ViewController: UIViewController {
         rightPlayerSelection.hidden = true
         rightPlayerPicked = true
         rightOrc.transform = CGAffineTransformMakeScale(-1, 1)
+        rightPlayer = Orc(startingHp: 50, attackPwr: 10, playerSide: "Right")
+
     }
     
     func leftSoldierPicked2() {
@@ -74,12 +76,15 @@ class ViewController: UIViewController {
         leftPlayerSelection.hidden = true
         leftPlayerPicked = true
         leftSoldier.transform = CGAffineTransformMakeScale(-1, 1)
+        leftPlayer = Soldier(startingHp: 50, attackPwr: 10, playerSide: "Left")
+
     }
     
     func rightSoldierPicked2() {
         rightSoldier.hidden = false
         rightPlayerSelection.hidden = true
         rightPlayerPicked = true
+        rightPlayer = Soldier(startingHp: 50, attackPwr: 10, playerSide: "Right")
     }
     
     func bothSidesPicked() {
@@ -102,11 +107,31 @@ class ViewController: UIViewController {
 
     
     @IBAction func onPressedLeftAttackBtn(sender: AnyObject) {
+        mainTextLbl.text = "\(leftPlayer.name) attacks for \(leftPlayer.attackPwr) damage!"
+        leftPlayer.attemptAttack(rightPlayer.attackPwr)
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "leftAttack", userInfo: nil, repeats: false)
         
+        if !rightPlayer.isAlive {
+            rightHpLbl.text = ""
+            mainTextLbl.text = "Killed \(rightPlayer.name)"
+            rightOrc.transform = CGAffineTransformMakeScale(-1, -1)
+            rightSoldier.transform = CGAffineTransformMakeScale(-1, -1)
+
+        }
     }
     
     @IBAction func onPressedRightAttackBtn(sender: AnyObject) {
+        mainTextLbl.text = "\(rightPlayer.name) attacks for \(rightPlayer.attackPwr) damage!"
+        rightPlayer.attemptAttack(leftPlayer.attackPwr)
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "rightAttack", userInfo: nil, repeats: false)
         
+        if !leftPlayer.isAlive {
+            leftHpLbl.text = ""
+            mainTextLbl.text = "Killed \(leftPlayer.name)"
+            leftOrc.transform = CGAffineTransformMakeScale(-1, -1)
+            leftSoldier.transform = CGAffineTransformMakeScale(-1, -1)
+
+        }
     }
     
     @IBAction func onPressedLeftOrcBtn(sender: AnyObject) {
