@@ -10,5 +10,8 @@ import Foundation
 
 class Orc: Character {
     
+    override var playerRace: String {
+        return "Orc"
+    }
     
 }

@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var leftPlayerPicked = false
+    var rightPlayerPicked = false
+    var leftPlayer: Character!
+    var rightPlayer: Character!
+    
     
     @IBOutlet weak var leftAttackBtn: UIButton!
     @IBOutlet weak var leftAttackLbl: UILabel!
@@ -32,64 +37,97 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func initialGameState() {
+        leftOrc.hidden = true
+        rightOrc.hidden = true
+        leftSoldier.hidden = true
+        rightSoldier.hidden = true
+        leftAttackLbl.hidden = true
+        rightAttackLbl.hidden = true
+        leftAttackBtn.hidden = true
+        rightAttackBtn.hidden = true
+        leftPlayerSelection.hidden = false
+        rightPlayerSelection.hidden = false
+        leftPlayerPicked = false
+        rightPlayerPicked = false
     }
 
     
     func leftOrcPicked2() {
         leftOrc.hidden = false
         leftPlayerSelection.hidden = true
-        leftHpLbl.hidden = false
-        leftAttackBtn.hidden = false
-        leftAttackLbl.hidden = false
+        leftPlayerPicked = true
+        leftPlayer = Orc(startingHp: 50, attackPwr: 10, side: right)
     }
     
     func rightOrcPicked2() {
         rightOrc.hidden = false
         rightPlayerSelection.hidden = true
-        rightHpLbl.hidden = false
-        rightAttackBtn.hidden = false
-        rightAttackLbl.hidden = false        
+        rightPlayerPicked = true
+        rightOrc.transform = CGAffineTransformMakeScale(-1, 1)
     }
     
     func leftSoldierPicked2() {
         leftSoldier.hidden = false
         leftPlayerSelection.hidden = true
-        leftHpLbl.hidden = false
-        leftAttackBtn.hidden = false
-        leftAttackLbl.hidden = false
+        leftPlayerPicked = true
+        leftSoldier.transform = CGAffineTransformMakeScale(-1, 1)
     }
     
     func rightSoldierPicked2() {
         rightSoldier.hidden = false
         rightPlayerSelection.hidden = true
+        rightPlayerPicked = true
+    }
+    
+    func bothSidesPicked() {
         rightHpLbl.hidden = false
         rightAttackBtn.hidden = false
         rightAttackLbl.hidden = false
+        leftHpLbl.hidden = false
+        leftAttackBtn.hidden = false
+        leftAttackLbl.hidden = false
+    }
+    
+    func bothReady() -> Bool {
+        if rightPlayerPicked == true && leftPlayerPicked == true {
+            bothSidesPicked()
+            
+        }
+        return true
     }
     
 
+    
     @IBAction func onPressedLeftAttackBtn(sender: AnyObject) {
         
     }
     
     @IBAction func onPressedRightAttackBtn(sender: AnyObject) {
+        
     }
     
     @IBAction func onPressedLeftOrcBtn(sender: AnyObject) {
         leftOrcPicked2()
+        bothReady()
+        
     }
     
     @IBAction func onPressedLeftSoldierBtn(sender: AnyObject) {
         leftSoldierPicked2()
+        bothReady()
     }
 
     @IBAction func onPressedRightOrcBtn(sender: AnyObject) {
         rightOrcPicked2()
+        bothReady()
     }
     
     @IBAction func onPressedRightSoldierBtn(sender: AnyObject) {
         rightSoldierPicked2()
+        bothReady()
     }
     
 }

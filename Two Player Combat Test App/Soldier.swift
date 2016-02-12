@@ -10,6 +10,9 @@ import Foundation
 
 class Soldier: Character {
     
+    override var playerRace: String {
+        return "Soldier"
+    }
     
 }
 
