@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightOrc: UIImageView!
     @IBOutlet weak var rightSoldier: UIImageView!
 
+    @IBOutlet weak var restartBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,13 @@ class ViewController: UIViewController {
         rightPlayerSelection.hidden = false
         leftPlayerPicked = false
         rightPlayerPicked = false
+        restartBtn.hidden = true
+        leftHpLbl.hidden = true
+        rightHpLbl.hidden = true
+        rightOrc.transform = CGAffineTransformMakeScale(1, 1)
+        leftOrc.transform = CGAffineTransformMakeScale(1, 1)
+        rightSoldier.transform = CGAffineTransformMakeScale(1, 1)
+        leftSoldier.transform = CGAffineTransformMakeScale(1, 1)
     }
 
     
@@ -59,7 +67,7 @@ class ViewController: UIViewController {
         leftOrc.hidden = false
         leftPlayerSelection.hidden = true
         leftPlayerPicked = true
-        leftPlayer = Orc(startingHp: 50, attackPwr: 10, playerSide: "Left")
+        leftPlayer = Orc(startingHp: 40, attackPwr: 15, playerSide: "Left")
     }
     
     func rightOrcPicked2() {
@@ -67,7 +75,7 @@ class ViewController: UIViewController {
         rightPlayerSelection.hidden = true
         rightPlayerPicked = true
         rightOrc.transform = CGAffineTransformMakeScale(-1, 1)
-        rightPlayer = Orc(startingHp: 50, attackPwr: 10, playerSide: "Right")
+        rightPlayer = Orc(startingHp: 40, attackPwr: 15, playerSide: "Right")
 
     }
     
@@ -76,7 +84,7 @@ class ViewController: UIViewController {
         leftPlayerSelection.hidden = true
         leftPlayerPicked = true
         leftSoldier.transform = CGAffineTransformMakeScale(-1, 1)
-        leftPlayer = Soldier(startingHp: 50, attackPwr: 10, playerSide: "Left")
+        leftPlayer = Soldier(startingHp: 60, attackPwr: 10, playerSide: "Left")
 
     }
     
@@ -84,7 +92,7 @@ class ViewController: UIViewController {
         rightSoldier.hidden = false
         rightPlayerSelection.hidden = true
         rightPlayerPicked = true
-        rightPlayer = Soldier(startingHp: 50, attackPwr: 10, playerSide: "Right")
+        rightPlayer = Soldier(startingHp: 60, attackPwr: 10, playerSide: "Right")
     }
     
     func bothSidesPicked() {
@@ -94,6 +102,9 @@ class ViewController: UIViewController {
         leftHpLbl.hidden = false
         leftAttackBtn.hidden = false
         leftAttackLbl.hidden = false
+        rightHpLbl.text = "\(rightPlayer.hp) HP"
+        leftHpLbl.text = "\(leftPlayer.hp) HP"
+        mainTextLbl.text = "Wreck'em!!"
     }
     
     func bothReady() -> Bool {
@@ -104,33 +115,44 @@ class ViewController: UIViewController {
         return true
     }
     
+    func someoneDied() {
+        leftAttackLbl.hidden = true
+        rightAttackLbl.hidden = true
+        leftAttackBtn.hidden = true
+        rightAttackBtn.hidden = true
+        leftHpLbl.hidden = true
+        rightHpLbl.hidden = true
+        restartBtn.hidden = false
+    }
 
     
     @IBAction func onPressedLeftAttackBtn(sender: AnyObject) {
         mainTextLbl.text = "\(leftPlayer.name) attacks for \(leftPlayer.attackPwr) damage!"
-        leftPlayer.attemptAttack(rightPlayer.attackPwr)
-        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "leftAttack", userInfo: nil, repeats: false)
+        rightPlayer.attemptAttack(leftPlayer.attackPwr)
+        rightHpLbl.text = "\(rightPlayer.hp) HP"
+        disableButton(leftAttackBtn)
         
         if !rightPlayer.isAlive {
             rightHpLbl.text = ""
-            mainTextLbl.text = "Killed \(rightPlayer.name)"
+            mainTextLbl.text = "\(leftPlayer.name) Killed \(rightPlayer.name)"
             rightOrc.transform = CGAffineTransformMakeScale(-1, -1)
             rightSoldier.transform = CGAffineTransformMakeScale(-1, -1)
-
+            someoneDied()
         }
     }
     
     @IBAction func onPressedRightAttackBtn(sender: AnyObject) {
         mainTextLbl.text = "\(rightPlayer.name) attacks for \(rightPlayer.attackPwr) damage!"
-        rightPlayer.attemptAttack(leftPlayer.attackPwr)
-        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "rightAttack", userInfo: nil, repeats: false)
+        leftPlayer.attemptAttack(rightPlayer.attackPwr)
+        leftHpLbl.text = "\(leftPlayer.hp) HP"
+        disableButton(rightAttackBtn)
         
         if !leftPlayer.isAlive {
             leftHpLbl.text = ""
-            mainTextLbl.text = "Killed \(leftPlayer.name)"
+            mainTextLbl.text = "\(rightPlayer.name) Killed \(leftPlayer.name)"
             leftOrc.transform = CGAffineTransformMakeScale(-1, -1)
             leftSoldier.transform = CGAffineTransformMakeScale(-1, -1)
-
+            someoneDied()
         }
     }
     
@@ -153,6 +175,22 @@ class ViewController: UIViewController {
     @IBAction func onPressedRightSoldierBtn(sender: AnyObject) {
         rightSoldierPicked2()
         bothReady()
+    }
+    
+    @IBAction func onPressedRestartBtn(sender: AnyObject) {
+        initialGameState()
+    }
+    
+    func enableButton(timer:NSTimer!) {
+        
+        let btn = timer.userInfo as? UIButton
+        btn?.enabled = true
+    }
+    
+    func disableButton(btn: UIButton) {
+        btn.enabled = false
+        
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: "enableButton:", userInfo: btn, repeats: false)
     }
     
 }

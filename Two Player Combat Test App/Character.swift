@@ -43,7 +43,7 @@ class Character {
     
     var isAlive: Bool {
         get {
-            if hp <= 0 {
+            if _hp <= 0 {
                 return false
             } else {
                 return true
@@ -59,10 +59,8 @@ class Character {
         self._name = "\(playerSide) \(playerRace)"
     }
     
-    func attemptAttack(attackPwr: Int) -> Bool {
+    func attemptAttack(attackPwr: Int) {
         self._hp -= attackPwr
-        
-        return true
     }
     
 }

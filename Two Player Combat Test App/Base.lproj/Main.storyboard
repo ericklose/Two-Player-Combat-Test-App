@@ -200,6 +200,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ug-uR-8nY">
+                                <rect key="frame" x="240" y="257" width="110" height="80"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Restart?">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPressedRestartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lMY-RV-ohT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -237,6 +247,7 @@
                             <constraint firstItem="TpK-I2-3HT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yys-p5-LQL"/>
                             <constraint firstItem="BRW-in-fTD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="15" id="ZYR-di-kug"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="9tF-lg-mDR" secondAttribute="bottom" id="aPy-KC-540"/>
+                            <constraint firstItem="0ug-uR-8nY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bHw-Ra-jZU"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="TxB-2W-W0L" secondAttribute="bottom" constant="1" id="d20-sV-8FY"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="2Pk-f2-3zQ" secondAttribute="bottom" id="eYR-T1-ztT"/>
                             <constraint firstItem="Ca3-3f-2Ft" firstAttribute="leading" secondItem="zgK-2V-An1" secondAttribute="leading" id="ejQ-QX-lgc"/>
@@ -252,6 +263,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aLi-R7-KZ6" secondAttribute="bottom" id="lRu-CK-Dw9"/>
                             <constraint firstItem="TpK-I2-3HT" firstAttribute="centerY" secondItem="zgK-2V-An1" secondAttribute="centerY" id="lrA-qW-gdr"/>
                             <constraint firstItem="lKM-sM-ntu" firstAttribute="centerX" secondItem="2Pk-f2-3zQ" secondAttribute="centerX" id="mo1-p4-LpS"/>
+                            <constraint firstItem="0ug-uR-8nY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nkh-Y6-Nt9"/>
                             <constraint firstItem="FuG-nw-WI7" firstAttribute="centerX" secondItem="kLk-jc-mCD" secondAttribute="centerX" id="oP9-sf-fIl"/>
                             <constraint firstItem="zgK-2V-An1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="pIj-th-lFO"/>
                             <constraint firstItem="aLi-R7-KZ6" firstAttribute="top" secondItem="lKM-sM-ntu" secondAttribute="bottom" id="qnA-du-T1T"/>
@@ -291,6 +303,7 @@
                         <outlet property="leftPlayerSelection" destination="TxB-2W-W0L" id="dqm-FN-dUX"/>
                         <outlet property="leftSoldier" destination="Ca3-3f-2Ft" id="Tyh-v4-gS0"/>
                         <outlet property="mainTextLbl" destination="ZPT-JS-BPO" id="7cg-Ky-drr"/>
+                        <outlet property="restartBtn" destination="0ug-uR-8nY" id="co2-qv-3dv"/>
                         <outlet property="rightAttackBtn" destination="kLk-jc-mCD" id="WFN-do-RuG"/>
                         <outlet property="rightAttackLbl" destination="FuG-nw-WI7" id="C7V-g6-PQd"/>
                         <outlet property="rightHpLbl" destination="4B7-0T-NoA" id="ASq-oe-ryt"/>
